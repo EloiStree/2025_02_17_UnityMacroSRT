@@ -6,19 +6,39 @@ using UnityEngine;
 
 public class SRTMono_TextToData : MonoBehaviour
 {
-
     public TextAsset m_imporText;
-    public List<TextLineInSRT> m_textLines;
+    public SRTFileContent m_textLines = new SRTFileContent();
+    public SRTFileContentScriptable m_scriptableToStore;
+    public bool m_removeEmptyLine=true;
+    public bool m_removeIntegerLine=true;
 
-    [ContextMenu("Parse")]
-    public void Parse(){
-        SRTImportUtility.TryToImport(m_imporText.text, out m_textLines);
+    [ContextMenu("Try to Parse")]
+    public void TryParse(){
+        SRTImportUtility.TryToImport(m_imporText.text , m_imporText.name, out m_textLines);
+        if (m_removeIntegerLine) { 
+            SRTImportUtility.RemoveIntegerLine(ref m_textLines);
+        }
+        if (m_removeEmptyLine) { 
+            SRTImportUtility.RemoveEmptyLine(ref m_textLines);
+        }
+
+        if (m_scriptableToStore != null)
+        {
+            m_scriptableToStore.m_data = m_textLines;
+        }
     }
 }
 
 public class SRTImportUtility{
+
     public static string m_timeLineRegexFromTo=
     @"\s*\d{2}\s*:\s*\d{2}\s*:\s*\d{2}\s*,\s*\d{3}\s*-->\s*\d{2}\s*:\s*\d{2}\s*:\s*\d{2}\s*,\s*\d{3}\s*";
+    public static void TryToImport(in string text, in string fileName, out SRTFileContent fileSRT) {
+
+        fileSRT = new SRTFileContent();
+        fileSRT.m_fileName =fileName;
+        TryToImport(text, out fileSRT.m_textLines);
+    }
     public static void TryToImport(in string text, out List<TextLineInSRT> outTextLines){
         
             Regex regex = new Regex(m_timeLineRegexFromTo);
@@ -45,7 +65,8 @@ public class SRTImportUtility{
                 }
                 lineInBuild.SetText(textBuilder.ToString());
                 textBuilder.Clear();
-                lineInBuild= new TextLineInSRT();
+                outTextLines.Add(lineInBuild);
+                lineInBuild = new TextLineInSRT();
                 
                 int.TryParse(timeStrings[0].Trim(), out int hoursFrom) ;
                 int.TryParse(timeStrings[1].Trim(), out int minutesFrom) ;
@@ -69,12 +90,65 @@ public class SRTImportUtility{
         
     }
 
+    public static void RemoveEmptyLine(TextLineInSRT line)
+    {
+
+        List<string> linesToFilter = new List<string>();
+        linesToFilter.AddRange(line.m_textInElapsedTime.Split(new string[] { "\r\n", "\n", "\r" }, StringSplitOptions.None));
+        StringBuilder textBuilder = new StringBuilder();
+        foreach (string focusLine in linesToFilter)
+        {
+            if (! string.IsNullOrWhiteSpace(focusLine))
+            {
+                textBuilder.AppendLine(focusLine.Trim());
+            }
+        }
+        line.SetText( textBuilder.ToString().Trim());
+
+    }
+    public static void RemoveIntegerLine(TextLineInSRT line)
+    {
+        List<string> lines = new List<string>();
+        lines.AddRange(line.m_textInElapsedTime.Split(new string[] { "\r\n", "\n", "\r" }, StringSplitOptions.None));
+        StringBuilder textBuilder = new StringBuilder();
+        foreach (string lineText in lines)
+        {
+            if (! int.TryParse(lineText, out int result))
+            {
+                textBuilder.AppendLine(lineText);
+            }
+        }
+        line.SetText(textBuilder.ToString());
+    }
+
+    public static void RemoveEmptyLine(ref SRTFileContent m_textLines)
+    {
+        foreach (TextLineInSRT line in m_textLines.m_textLines)
+        {
+            RemoveEmptyLine(line);
+        }
+    }
+
+    public static void RemoveIntegerLine(ref SRTFileContent m_textLines)
+    {
+        foreach (TextLineInSRT line in m_textLines.m_textLines)
+        {
+            RemoveIntegerLine(line);
+        }
+    }
 }
 
 [System.Serializable]
 public class SRTFileContent{
     public string m_fileName="";
     public List<TextLineInSRT> m_textLines = new List<TextLineInSRT>();
+
+    public List<TextLineInSRT> GetAffectedLine(long now)
+    {
+        return m_textLines.FindAll(x => 
+        now >= x.m_timeSpace.GetStartInMilliseconds()  &&
+        now <= x.m_timeSpace.GetEndInMilliseconds() );
+    }
 }
 [System.Serializable]
 public class TextLineInSRT{
@@ -99,10 +173,15 @@ public class TextLineInSRT{
         return m_textInElapsedTime.Length;
     }
     public float GetDurationInSeconds(){
-        return m_timeSpace.GetDurationInMS()/1000.0f;
+        return m_timeSpace.GetDurationInMilliseconds()/1000.0f;
     }
     public long GetDurationInMilliseconds(){
-        return m_timeSpace.GetDurationInMS();
+        return m_timeSpace.GetDurationInMilliseconds();
+    }
+
+    public long GetRelativeEndInMilliseconds()
+    {
+        return m_timeSpace.GetEndInMilliseconds();
     }
 }
 
@@ -111,13 +190,13 @@ public class RelativeTimeFromToInMS{
     public long m_relativeTimeInMillisecondsStart = 0;
     public long m_relativeTimeInMillisecondsEnd = 0;
 
-    public long GetStartInMS(){
+    public long GetStartInMilliseconds(){
         return m_relativeTimeInMillisecondsStart;
     }
-    public long GetEndInMS(){
+    public long GetEndInMilliseconds(){
         return m_relativeTimeInMillisecondsEnd;
     }
-    public long GetDurationInMS(){
+    public long GetDurationInMilliseconds(){
         return m_relativeTimeInMillisecondsEnd - m_relativeTimeInMillisecondsStart;
     }
 

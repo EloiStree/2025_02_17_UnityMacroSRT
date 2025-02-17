@@ -130,13 +130,14 @@ GameObject:
   - component: {fileID: 556150871}
   - component: {fileID: 556150870}
   - component: {fileID: 556150869}
+  - component: {fileID: 556150872}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &556150869
 AudioListener:
   m_ObjectHideFlags: 0
@@ -211,6 +212,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &556150872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 556150868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1 &1688675734
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1688675735
 Light:
   m_ObjectHideFlags: 0
@@ -332,6 +377,71 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &1793799651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1793799653}
+  - component: {fileID: 1793799652}
+  m_Layer: 0
+  m_Name: Player SRT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1793799652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793799651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 603b8749d6b337641bfb778c47612b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_autoStart: 1
+  m_process:
+    m_fetcher:
+      m_playing:
+        m_fileName: 
+        m_textLines: []
+      m_useScriptable: {fileID: 11400000, guid: b1a1d8b3720cf0c41a51789137b9a1cd, type: 2}
+      m_focusLinesCurrent: []
+      m_focusLinesPrevious: []
+      m_newFocusLines: []
+      m_outFocusLines: []
+      m_lastReceivedTimeInMillisecondsRelative: 0
+    m_onStartRunning:
+      m_PersistentCalls:
+        m_Calls: []
+    m_onEndRunning:
+      m_PersistentCalls:
+        m_Calls: []
+  m_startTime: 0
+  m_relativeTimeInMilliseconds: 0
+  m_relativeTimeInSeconds: 0
+--- !u!4 &1793799653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793799651}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 617.38495, y: 506.36798, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4197976211405981951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388,11 +498,1357 @@ PrefabInstance:
       propertyPath: m_imporText
       value: 
       objectReference: {fileID: 4900000, guid: d24a2bdd72f52fb4eb0bb67fb23e341c, type: 3}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_scriptableToStore
+      value: 
+      objectReference: {fileID: 11400000, guid: b1a1d8b3720cf0c41a51789137b9a1cd, type: 2}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.size
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_fileName
+      value: WorldAintPerfect
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.size
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[0].m_textInElapsedTime
+      value: '1
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[1].m_textInElapsedTime
+      value: '[Music]
+
+
+
+        2
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[2].m_textInElapsedTime
+      value: 'W the world ain''t perfect still ain''t no
+
+
+
+        3
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[3].m_textInElapsedTime
+      value: 'reason that we waking up to murder yeah
+
+
+
+        4
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[4].m_textInElapsedTime
+      value: 'and if the world ain''t learning I pray
+
+
+
+        5
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[5].m_textInElapsedTime
+      value: 'her mother nature hoping she ain''t
+
+
+
+        6
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[6].m_textInElapsedTime
+      value: 'hurting and if the world''s still turning
+
+
+
+        7
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[7].m_textInElapsedTime
+      value: 'I tell the people watch what you be
+
+
+
+        8
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[8].m_textInElapsedTime
+      value: 'concerned with yeah and if the world
+
+
+
+        9
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[9].m_textInElapsedTime
+      value: 'starts burning maybe the tears of our
+
+
+
+        10
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[10].m_textInElapsedTime
+      value: 'children will
+
+
+
+        11
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[11].m_textInElapsedTime
+      value: '[Music]
+
+
+
+        12
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[12].m_textInElapsedTime
+      value: 'kill and if the world''s still turning I
+
+
+
+        13
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[13].m_textInElapsedTime
+      value: 'tell the people watch what you be
+
+
+
+        14
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[14].m_textInElapsedTime
+      value: 'concerned
+
+
+
+        15
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[15].m_textInElapsedTime
+      value: 'with the world start burning maybe the
+
+
+
+        16
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[16].m_textInElapsedTime
+      value: 'tears of our children will
+
+
+
+        17
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[17].m_textInElapsedTime
+      value: '[Music]
+
+
+
+        18
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[18].m_textInElapsedTime
+      value: '[Music]
+
+
+
+        19
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[19].m_textInElapsedTime
+      value: 'the world ain''t perfect still no reason
+
+
+
+        20
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[20].m_textInElapsedTime
+      value: 'that we waking up to murder yeah yeah
+
+
+
+        21
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[21].m_textInElapsedTime
+      value: 'and if the world ain''t learning I pray
+
+
+
+        22
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[22].m_textInElapsedTime
+      value: 'the mother nature open she ain''t yeah
+
+
+
+        23
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[23].m_textInElapsedTime
+      value: 'and if the world still turning I tell
+
+
+
+        24
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[24].m_textInElapsedTime
+      value: 'the people watch what you be concerned
+
+
+
+        25
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[25].m_textInElapsedTime
+      value: 'with yeah and if the world starts
+
+
+
+        26
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[26].m_textInElapsedTime
+      value: 'burning maybe the tears of all ja
+
+
+
+        27
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[27].m_textInElapsedTime
+      value: 'and if the world still turning I tell
+
+
+
+        28
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[28].m_textInElapsedTime
+      value: 'the people watch what you be concerned
+
+
+
+        29
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[29].m_textInElapsedTime
+      value: 'with me and if the world start burning
+
+
+
+        30
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[30].m_textInElapsedTime
+      value: 'maybe the tears of our children will
+
+
+
+        31
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[31].m_textInElapsedTime
+      value: 'cure it
+
+
+
+        32
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[32].m_textInElapsedTime
+      value: '[Music]
+
+
+
+        33
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[33].m_textInElapsedTime
+      value: '[Music]
+
+
+
+        34
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[34].m_textInElapsedTime
+      value: 'the world ain''t perfect still ain''t no
+
+
+
+        35
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[35].m_textInElapsedTime
+      value: 'reason that we waking up to murder yeah
+
+
+
+        36
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[36].m_textInElapsedTime
+      value: 'and if the world ain''t learning I pray
+
+
+
+        37
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[37].m_textInElapsedTime
+      value: 'the mother nature open sh
+
+
+
+        38
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[38].m_textInElapsedTime
+      value: 'her and if the world''s still turning I
+
+
+
+        39
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[39].m_textInElapsedTime
+      value: 'tell the people watch what you be
+
+
+
+        40
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[40].m_textInElapsedTime
+      value: 'concerned with yeah
+
+
+
+        41
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[41].m_textInElapsedTime
+      value: 'and if the world starts burning maybe
+
+
+
+        42
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[42].m_textInElapsedTime
+      value: 'the tears of our children will C it
+
+
+
+        43
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[0].m_textInElapsedTime
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[1].m_textInElapsedTime
+      value: '[Music]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[2].m_textInElapsedTime
+      value: W the world ain't perfect still ain't no
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[3].m_textInElapsedTime
+      value: reason that we waking up to murder yeah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[4].m_textInElapsedTime
+      value: and if the world ain't learning I pray
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[5].m_textInElapsedTime
+      value: her mother nature hoping she ain't
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[6].m_textInElapsedTime
+      value: hurting and if the world's still turning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[7].m_textInElapsedTime
+      value: I tell the people watch what you be
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[8].m_textInElapsedTime
+      value: concerned with yeah and if the world
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[9].m_textInElapsedTime
+      value: starts burning maybe the tears of our
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[10].m_textInElapsedTime
+      value: children will
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[11].m_textInElapsedTime
+      value: '[Music]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[12].m_textInElapsedTime
+      value: kill and if the world's still turning I
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[13].m_textInElapsedTime
+      value: tell the people watch what you be
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[14].m_textInElapsedTime
+      value: concerned
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[15].m_textInElapsedTime
+      value: with the world start burning maybe the
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[16].m_textInElapsedTime
+      value: tears of our children will
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[17].m_textInElapsedTime
+      value: '[Music]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[18].m_textInElapsedTime
+      value: '[Music]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[19].m_textInElapsedTime
+      value: the world ain't perfect still no reason
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[20].m_textInElapsedTime
+      value: that we waking up to murder yeah yeah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[21].m_textInElapsedTime
+      value: and if the world ain't learning I pray
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[22].m_textInElapsedTime
+      value: the mother nature open she ain't yeah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[23].m_textInElapsedTime
+      value: and if the world still turning I tell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[24].m_textInElapsedTime
+      value: the people watch what you be concerned
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[25].m_textInElapsedTime
+      value: with yeah and if the world starts
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[26].m_textInElapsedTime
+      value: burning maybe the tears of all ja
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[27].m_textInElapsedTime
+      value: and if the world still turning I tell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[28].m_textInElapsedTime
+      value: the people watch what you be concerned
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[29].m_textInElapsedTime
+      value: with me and if the world start burning
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[30].m_textInElapsedTime
+      value: maybe the tears of our children will
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[31].m_textInElapsedTime
+      value: cure it
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[32].m_textInElapsedTime
+      value: '[Music]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[33].m_textInElapsedTime
+      value: '[Music]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[34].m_textInElapsedTime
+      value: the world ain't perfect still ain't no
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[35].m_textInElapsedTime
+      value: reason that we waking up to murder yeah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[36].m_textInElapsedTime
+      value: and if the world ain't learning I pray
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[37].m_textInElapsedTime
+      value: the mother nature open sh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[38].m_textInElapsedTime
+      value: her and if the world's still turning I
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[39].m_textInElapsedTime
+      value: tell the people watch what you be
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[40].m_textInElapsedTime
+      value: concerned with yeah
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[41].m_textInElapsedTime
+      value: and if the world starts burning maybe
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[42].m_textInElapsedTime
+      value: the tears of our children will C it
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[1].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 11679
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[2].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 15080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[3].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 18279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[4].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 20840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[5].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 23279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[6].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 26439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[7].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 28359
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[8].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 31160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[9].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 33840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[10].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 36250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[11].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 47280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[12].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 50060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[13].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 52320
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[14].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 53640
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[15].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 57000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[16].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 61280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[17].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 100579
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[18].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 114060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[19].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 117439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[20].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 120280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[21].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 122799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[22].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 126280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[23].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 128840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[24].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 131038
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[25].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 133520
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[26].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 138080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[27].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 152840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[28].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 155080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[29].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 158519
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[30].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 160560
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[31].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 164040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[32].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 196710
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[33].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 222599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[34].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 225080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[35].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 228239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[36].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 230799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[37].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 233239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[38].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 236599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[39].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 238319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[40].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 240239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[41].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 242920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[42].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 246040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[1].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[2].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 11679
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[3].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 15080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[4].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 18279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[5].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 20840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[6].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 23279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[7].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 26439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[8].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 28359
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[9].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 31160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[10].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 33840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[11].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 36250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[12].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 47280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[13].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 50060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[14].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 52320
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[15].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 53640
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[16].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 57000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[17].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 66550
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[18].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 106910
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[19].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 114060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[20].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 117439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[21].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 120280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[22].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 122799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[23].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 126280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[24].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 128840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[25].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 131038
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[26].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 133520
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[27].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 150239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[28].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 152840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[29].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 155080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[30].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 158519
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[31].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 160560
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[32].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 175090
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[33].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 201170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[34].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 222599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[35].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 225080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[36].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 228239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[37].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 230799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[38].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 233239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[39].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 236599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[40].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 238319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[41].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 240239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.Array.data[42].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 242920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[1].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 11679
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[2].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 15080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[3].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 18279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[4].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 20840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[5].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 23279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[6].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 26439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[7].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 28359
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[8].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 31160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[9].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 33840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[10].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 36250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[11].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 47280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[12].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 50060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[13].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 52320
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[14].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 53640
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[15].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 57000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[16].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 61280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[17].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 100579
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[18].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 114060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[19].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 117439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[20].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 120280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[21].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 122799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[22].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 126280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[23].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 128840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[24].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 131038
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[25].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 133520
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[26].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 138080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[27].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 152840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[28].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 155080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[29].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 158519
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[30].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 160560
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[31].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 164040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[32].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 196710
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[33].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 222599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[34].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 225080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[35].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 228239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[36].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 230799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[37].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 233239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[38].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 236599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[39].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 238319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[40].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 240239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[41].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 242920
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[42].m_timeSpace.m_relativeTimeInMillisecondsEnd
+      value: 246040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[1].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[2].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 11679
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[3].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 15080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[4].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 18279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[5].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 20840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[6].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 23279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[7].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 26439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[8].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 28359
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[9].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 31160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[10].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 33840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[11].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 36250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[12].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 47280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[13].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 50060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[14].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 52320
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[15].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 53640
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[16].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 57000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[17].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 66550
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[18].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 106910
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[19].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 114060
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[20].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 117439
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[21].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 120280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[22].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 122799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[23].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 126280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[24].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 128840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[25].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 131038
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[26].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 133520
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[27].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 150239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[28].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 152840
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[29].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 155080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[30].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 158519
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[31].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 160560
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[32].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 175090
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[33].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 201170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[34].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 222599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[35].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 225080
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[36].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 228239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[37].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 230799
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[38].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 233239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[39].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 236599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[40].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 238319
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[41].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 240239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858525197429768379, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+      propertyPath: m_textLines.m_textLines.Array.data[42].m_timeSpace.m_relativeTimeInMillisecondsStart
+      value: 242920
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6d7a6bb7083e0294abc1e7c30526b205, type: 3}
+--- !u!1001 &4688060821729816755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2967588383110198345, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_Name
+      value: 22MinutesNTPSRT
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.207
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880389428960150878, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 274027874308935712, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: d35c19eb16ed7ca46945d727aeca963a, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -400,3 +1856,5 @@ SceneRoots:
   - {fileID: 556150871}
   - {fileID: 1688675736}
   - {fileID: 4197976211405981951}
+  - {fileID: 1793799653}
+  - {fileID: 4688060821729816755}

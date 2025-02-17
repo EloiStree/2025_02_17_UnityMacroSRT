@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.elab.macrosrt",                              
+  "displayName": "Unity Macro SRT",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Tool to use SRT as macro trigger for relative time project.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2025_02_17_UnityMacroSRT.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
